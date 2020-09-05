@@ -1,0 +1,112 @@
+//scss for component common
+a {
+	text-decoration: none;
+	display: block;
+	outline: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	image-rendering: auto;
+}
+
+.logo {
+	font-size: 2.4rem;
+	font-family: RbB;
+
+	@include leading(24, 20);
+	a {
+		color: $black-cl;
+	}
+	span {
+		color: $blue-cl;
+	}
+}
+
+.btn {
+	max-width: 16.9rem;
+	max-height: 6rem;
+	@include transition(transform 300ms);
+	@include tracking(50);
+	@include br(999px);
+	a {
+		display: inline-block;
+		font-size: 1.3rem;
+		font-weight: bold;
+		line-height: 1.2;
+		color: $white-cl;
+		text-align: center;
+	}
+	&:hover {
+		transform: translateY(-1px);
+	}
+	&.--blue {
+		background: $blue-cl;
+	}
+	&.--shadow {
+		box-shadow: 0 3px 8px rgba($color: $black-cl, $alpha: 0.3);
+	}
+}
+
+.main-title {
+	line-height: 1.2;
+	font-weight: bold;
+
+	&.--large {
+		font-size: 4.8rem;
+	}
+	&.--medium {
+		font-size: 2.4rem;
+	}
+	&.--small {
+		font-size: 1.4rem;
+	}
+	&.--gray {
+		color: $gray-cl;
+	}
+	&.--white {
+		color: $white-cl;
+	}
+	&.--border-bt {
+		position: relative;
+		padding-bottom: 1.5rem;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -0.2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 7rem;
+			height: 0.3rem;
+			background: $blue-cl;
+		}
+	}
+}
+
+.scroll-btn {
+	width: 4rem;
+	height: 4rem;
+	background-color: #fff;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #acacac;
+	z-index: 9999;
+	&.fas {
+		font-size: 1.6rem;
+	}
+}

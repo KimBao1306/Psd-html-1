@@ -1,0 +1,79 @@
+.footer {
+	padding-top: 7.8rem;
+	width: 100%;
+	background: #252525;
+	.container {
+		@include flex(row, space-between);
+		& > div {
+			width: calc(100% / 3);
+		}
+	}
+
+	.logo {
+		margin-bottom: 3.7rem;
+		img {
+			margin: 0;
+		}
+	}
+
+	&__menu {
+		max-width: 30rem;
+
+		h3 {
+			margin-bottom: 1.4rem;
+			font-weight: bold;
+			font-size: 1.6rem;
+			color: $white-cl;
+		}
+
+		li {
+			a {
+				width: 100%;
+				display: inline-block;
+				color: $white-cl;
+				font-size: 1.4rem;
+				padding: 1.2rem 0;
+				border-bottom: 1px solid $border-cl;
+
+				@include flex(row, space-between);
+				@include transition(color $t);
+			}
+
+			&:hover {
+				a {
+					color: $blue-cl;
+				}
+			}
+		}
+	}
+
+	.author {
+		margin-top: 6rem;
+		padding: 1.5rem 0;
+
+		background: #1e1e1e;
+		text-align: center;
+		color: $white-cl;
+		font-size: 1.2rem;
+		span {
+			color: #366136;
+		}
+	}
+
+	@include mobile {
+		.container {
+			flex-direction: column;
+			div {
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+		}
+		&__menu {
+			max-width: 100%;
+		}
+
+		.author {
+			margin-top: 2rem;
+		}
+	}
+}
